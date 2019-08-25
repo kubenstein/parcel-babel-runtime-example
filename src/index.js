@@ -1,2 +1,3 @@
-const array = Array.from([1, 2, 3], x => 2 * x)
-console.log(`hello world: ${array}`);
+const array = [1, 2, 3, 4, 5];
+const number = array.find((x) => x > 3);
+console.log(`find number greater than 3 from array [${array}]: ${number}`);
