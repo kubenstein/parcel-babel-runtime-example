@@ -4,7 +4,8 @@
   "author": "Jakub Niewczas <niewczas.jakub@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "parcel --port 3000 --out-dir .cache/_build/ src/parcel-html-entrypoint.html"
+    "serve": "parcel --port 3000 --out-dir .cache/_build/ src/parcel-html-entrypoint.html",
+    "build": "rm -rf ./dist/ ; NODE_ENV=production parcel build --out-dir dist/ src/parcel-html-entrypoint.html"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
