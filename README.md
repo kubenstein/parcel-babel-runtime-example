@@ -56,7 +56,10 @@ yarn add --dev @babel/plugin-transform-runtime
 
 ```
 
-That's all that is needed to have fully working sandbox polyfilling (aka ponyfilling) solution integrated into parcel-based build pipeline.
+#### Why don't use `@babel/preset-env`?
+Alternative, theoretical solution (it doesn't work unfortunately) would be to use [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) because it supports ponyfilling out of the box - see [`useBuiltIns`](https://babeljs.io/docs/en/babel-preset-env#usebuiltins) option.
+
+Unfortunately it doesn't work with parcel because [parcel overwrites preset-env config with its own](https://github.com/parcel-bundler/parcel/issues/2819#issuecomment-474994277).
 
 ## Demo
 This demo transpiles:
