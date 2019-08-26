@@ -26,7 +26,7 @@ find([1, 2, 3, 4, 5], (x) => x > 3);
 Where `find` is a function providing same behaviour as that one in modern browsers `Array.find(...)`.
 
 
-### Different syntaxes
+#### Different syntaxes
 We can see in an example above that, even though the goal of having a desired functionality while not patching global namespace is achieved, the syntax is clearly different.
 
 To use exactly same syntax when coding, we use babel plugin to do the conversion. Babel is a transpiler and that's exactly what it is designed for.
