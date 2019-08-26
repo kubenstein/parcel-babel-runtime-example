@@ -3,7 +3,7 @@
 The goal of this PoC (proof of concept) is to setup working [`parcel-bundler`](https://github.com/parcel-bundler/parcel) environment where missing JS functionalities are patched by babel-runtime (aka. Ponyfills) instead of polyfilling global namespace.
 
 ### Why are polyfills bad?
-Polyfilling means only patching functionalities that are missing, usually on older browsers, while using native implementations whenever it is available (modern browsers). The problem with polyfilling is it patches global objects, so for example if `Array.from(..)` method is missing on IE a polypill will add a `form` method to `Array.prototype` object.
+Polyfilling means only patching functionalities that are missing, usually on older browsers, while using native implementations whenever it is available (modern browsers). The problem with polyfilling is it patches global objects, so for example if `Array.from(..)` method is missing on IE a polyfill will add a `form` method to `Array.prototype` object.
 
 That means if there are two polyfilling solutions used on a single page only the first implementation will be used. This may (and actually did to me) lead to incompatible mix of polyfills.
 
