@@ -15,15 +15,15 @@ The solution is not to polyfill at all, but instead wrap missing functionalities
 So instead:
 
 ```js
-Array.from([1, 2, 3], x => 2 * x)
+[1, 2, 3, 4, 5].find(x => x > 3);
 ```
 
 We want to write:
 
 ```js
-from([1, 2, 3], x => 2 * x);
+find([1, 2, 3, 4, 5], (x) => x > 3);
 ```
-Where `from` is a function providing same behaviour as that one in modern browsers `Array.from(...)`.
+Where `find` is a function providing same behaviour as that one in modern browsers `Array.find(...)`.
 
 
 ### Different syntaxes
