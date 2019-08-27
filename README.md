@@ -36,11 +36,11 @@ The plugin we want to use is [`@babel/plugin-transform-runtime`](https://babeljs
 ### Patching library
 The library we use is [`core-js`](https://github.com/zloirock/core-js). It provides both approaches: polyfiling (default) and ponyfilling (which they call "pure").
 
-### Bunlde file size
-`@babel/plugin-transform-runtime` transpiles and then put `import` only for `core-js` functions that are being used, so in most of cases the bundle size will be more optimise than just importing whole `babel-polyfill` or `core-js`.
+### Bundle file size
+`@babel/plugin-transform-runtime` transpiles and then puts `import` only for `core-js` functions that are being used, so in most of cases the bundle size will be more optimise than just importing whole `babel-polyfill` or `core-js`.
 
 ## Setup
-Setup is actually extremely simple. What we need to do is
+Setup is actually extremely simple. What we need to do is:
 1) Add `@babel/plugin-transform-runtime` package:
 ```bash
 yarn add --dev @babel/plugin-transform-runtime
